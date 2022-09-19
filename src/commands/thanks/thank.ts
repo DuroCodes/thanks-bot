@@ -11,6 +11,11 @@ export default new SlashCommand({
       type: ApplicationCommandOptionType.User,
       required: true,
     },
+    {
+      name: 'reason',
+      description: 'the reason you thanked the user',
+      type: ApplicationCommandOptionType.String,
+    },
   ],
   cooldown: 900000, // 15 minutes
   async run({ client, interaction, args }) {
